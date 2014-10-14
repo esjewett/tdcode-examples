@@ -1,0 +1,23 @@
+{
+  "name": "tdcode-examples",
+  "version": "0.0.0",
+  "description": "Examples for TechEd && d-code",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esjewett/tdcode-examples.git"
+  },
+  "author": "Ethan Jewett <ethan.jewett@coredatra.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/esjewett/tdcode-examples/issues"
+  },
+  "homepage": "https://github.com/esjewett/tdcode-examples",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-webserver": "^0.8.3"
+  }
+}
