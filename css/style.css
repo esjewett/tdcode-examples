@@ -7,7 +7,7 @@
   padding: 10px 0;
 }
 
-.chart {
+.chart, .chart-two {
   display: inline-block;
   height: 151px;
   margin-bottom: 20px;
@@ -47,23 +47,23 @@
   stroke: #666;
 }
 
-#hour-chart {
-  width: 260px;
+#hour-chart, #demo-two-time {
+  width: 400px;
 }
 
-#delay-chart {
-  width: 230px;
+#delay-chart, #demo-two-delay {
+  width: 400px;
 }
 
-#distance-chart {
+#distance-chart, #demo-two-distance {
   width: 420px;
 }
 
-#date-chart {
+#date-chart, #demo-two-date {
   width: 920px;
 }
 
-#flight-list {
+#flight-list, #demo-two-flight-list {
   min-height: 1024px;
 }
 

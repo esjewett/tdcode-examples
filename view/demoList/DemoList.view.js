@@ -10,13 +10,13 @@ sap.ui.jsview("view.demoList.DemoList", {
 			inset: false,
 			items: [
 				new sap.m.StandardListItem({
-					title : "Crossfilter Demo",
+					title : "Crossfilter Example",
 					type : sap.m.ListType.Active,
 					press : [oController.onDemoOneTap, oController],
 					unread: true
 				}),
 				new sap.m.StandardListItem({
-					title : "Demo 2",
+					title : "DC.js Example",
 					type : sap.m.ListType.Active,
 					press : [oController.onDemoTwoTap, oController],
 					unread: true
