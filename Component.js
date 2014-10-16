@@ -44,7 +44,16 @@ sap.ui.core.UIComponent.extend("esjewett.tddemo.Component", {
 							name : "demoThree",
 							view : "Demo",
 							viewPath : "view.demoThree",
-							viewType : "HTML",
+							// viewType : "HTML",
+							viewLevel : 2,
+							targetAggregation : "detailPages"
+						},
+						{
+							pattern : "demo/4",
+							name : "demoFour",
+							view : "Demo",
+							viewPath : "view.demoFour",
+							// viewType : "HTML",
 							viewLevel : 2,
 							targetAggregation : "detailPages"
 						}
@@ -94,11 +103,6 @@ sap.ui.core.UIComponent.extend("esjewett.tddemo.Component", {
 			type : "JS",
 			viewData : { component : this }
 		});
-
-		// set navigation model
-		// load the global data model
-		var oJSONDataModel = new sap.ui.model.json.JSONModel("model/data.json");
-		oView.setModel(oJSONDataModel);
 
 		// done
 		return oView;

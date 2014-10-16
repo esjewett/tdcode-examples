@@ -1,4 +1,4 @@
-sap.ui.controller("view.demoThree.Demo", {
+sap.ui.controller("view.demoFour.Demo", {
 
 	onInit: function(){
 		this.router = sap.ui.core.UIComponent.getRouterFor(this);
@@ -102,7 +102,7 @@ sap.ui.controller("view.demoThree.Demo", {
 		}
 		
 
-		var oFacetFilter = new sap.ui.ux3.FacetFilter("myFacetFilter");
+		var oFacetFilter = new sap.ui.ux3.FacetFilter("myFacetFilterTwo");
 
    		var oModel = new sap.ui.model.json.JSONModel();
     	oModel.setData(oData);
@@ -111,7 +111,7 @@ sap.ui.controller("view.demoThree.Demo", {
 		
     	var oItemTemplate = new sap.ui.core.ListItem({text:"{name}", key:"{key}"});
     	
-		var oFFL1 = new sap.ui.ux3.FacetFilterList("ffl1", {
+		var oFFL1 = new sap.ui.ux3.FacetFilterList("ffl1_two", {
 			title:"Car Brand",
 			items : {path : "/brands", template : oItemTemplate}
 		});
@@ -130,7 +130,7 @@ sap.ui.controller("view.demoThree.Demo", {
 
 		oFacetFilter.addList(oFFL1);
 
-		var oFFL2 = new sap.ui.ux3.FacetFilterList("ffl2", {
+		var oFFL2 = new sap.ui.ux3.FacetFilterList("ffl2_two", {
 			title:"Car Model",
 			multiSelect: false,
 			items : {path : "/models", template : oItemTemplate}
@@ -149,7 +149,7 @@ sap.ui.controller("view.demoThree.Demo", {
 		});
 		oFacetFilter.addList(oFFL2);
 
-		var oFFL3 = new sap.ui.ux3.FacetFilterList("ffl3", {
+		var oFFL3 = new sap.ui.ux3.FacetFilterList("ffl3_two", {
 			title:"Type",
 			items : {path : "/types", template : oItemTemplate}
 		});

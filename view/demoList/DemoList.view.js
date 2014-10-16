@@ -22,9 +22,15 @@ sap.ui.jsview("view.demoList.DemoList", {
 					unread: true
 				}),
 				new sap.m.StandardListItem({
-					title : "Demo 3",
+					title : "Facet Filter Example (pure UI5)",
 					type : sap.m.ListType.Active,
 					press : [oController.onDemoThreeTap, oController],
+					unread: true
+				}),
+				new sap.m.StandardListItem({
+					title : "Demo 4",
+					type : sap.m.ListType.Active,
+					press : [oController.onDemoFourTap, oController],
 					unread: true
 				})
 			],
