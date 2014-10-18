@@ -56,6 +56,15 @@ sap.ui.core.UIComponent.extend("esjewett.tddemo.Component", {
 							// viewType : "HTML",
 							viewLevel : 2,
 							targetAggregation : "detailPages"
+						},
+						{
+							pattern : "demo/5",
+							name : "demoFive",
+							view : "Demo",
+							viewPath : "view.demoFive",
+							// viewType : "HTML",
+							viewLevel : 2,
+							targetAggregation : "detailPages"
 						}
 					]
 				},

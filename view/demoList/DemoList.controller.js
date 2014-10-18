@@ -26,5 +26,11 @@ sap.ui.controller("view.demoList.DemoList", {
 		// Navigation based on item tapped here.
 		oEvent.oSource.setUnread(false);
 		this.router.navTo("demoFour");
+	},
+
+	onDemoFiveTap: function(oEvent){
+		// Navigation based on item tapped here.
+		oEvent.oSource.setUnread(false);
+		this.router.navTo("demoFive");
 	}
 });

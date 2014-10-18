@@ -1,14 +1,14 @@
 // This is the view in detail area which is instantiate within mailInbox.controller.js.
-sap.ui.jsview("view.demoFour.Demo", {
+sap.ui.jsview("view.demoFive.Demo", {
 
 	getControllerName: function() {
-		return "view.demoFour.Demo";
+		return "view.demoFive.Demo";
 	},
 
 	createContent : function(oController) {
 
 		this.page = new sap.m.Page({
-			title: "Facet Filter Example (Crossfilter)",
+			title: "Facet Filter with d3.js charts and Crossfilter",
 			showNavButton: sap.ui.Device.system.phone,
 			icon: "{img>/icon/UI5}",
 			content: []
