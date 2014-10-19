@@ -44,6 +44,12 @@ sap.ui.controller("view.demoThree.Demo", {
 				{name : "Cabrio", key: "3"}
 			]						
 		};
+
+		// for(var i = 0; i < 14; i++) {
+		// 	oData.cars = oData.cars.concat(oData.cars);
+		// }
+
+		console.log(oData.cars.length);
 		
     	
     	function calcFilter(oEvent, sFilterAtt, oFFL1, sFilterAtt1, oFFL2, sFilterAtt2) {
