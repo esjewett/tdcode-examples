@@ -8,7 +8,7 @@ sap.ui.jsview("view.demoFive.Demo", {
 	createContent : function(oController) {
 
 		this.page = new sap.m.Page({
-			title: "Facet Filter with d3.js charts and Crossfilter",
+			title: "UI5 Facet Filter with dc.js charts - all using Crossfilter",
 			showNavButton: sap.ui.Device.system.phone,
 			icon: "{img>/icon/UI5}",
 			content: []
