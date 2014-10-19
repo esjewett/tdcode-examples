@@ -165,6 +165,7 @@ sap.ui.controller("view.demoFive.Demo", {
 			xfilter.add(flights);
 
 			refreshBindings();
+			dc.renderAll();
 		});
 
 		function afterRenderFunction(oEvent) { 
@@ -217,7 +218,6 @@ sap.ui.controller("view.demoFive.Demo", {
 					.dimension(hour)
 					.group(hours)
 					.elasticY(true)
-					.transitionDuration(0)
 					.gap(1)
 					.x(d3.scale.linear().domain([0, 24]))
 					.round(dc.round.floor)
@@ -229,7 +229,6 @@ sap.ui.controller("view.demoFive.Demo", {
 					.height(151)
 					.margins({top: 10, right: 50, bottom: 30, left: 40})
 					.dimension(delay)
-					.transitionDuration(0)
 					.elasticY(true)
 					.group(delays)
 					.x(d3.scale.linear().domain([-60, 150]))
@@ -243,7 +242,6 @@ sap.ui.controller("view.demoFive.Demo", {
 					.height(151)
 					.margins({top: 10, right: 50, bottom: 30, left: 40})
 					.dimension(distance)
-					.transitionDuration(0)
 					.elasticY(true)
 					.group(distances)
 					.x(d3.scale.linear().domain([0, 2000]))
@@ -257,7 +255,6 @@ sap.ui.controller("view.demoFive.Demo", {
 					.margins({top: 10, right: 50, bottom: 30, left: 40})
 					.dimension(date)
 					.elasticY(true)
-					.transitionDuration(0)
 					.group(dates)
 					.x(d3.time.scale()
 				    	.domain([new Date(2001, 0, 1), new Date(2001, 3, 1)]))
