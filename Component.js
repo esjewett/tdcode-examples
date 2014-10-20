@@ -80,7 +80,6 @@ sap.ui.core.UIComponent.extend("esjewett.tddemo.Component", {
 		// 1. some very generic requires
 		jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
 		jQuery.sap.require("esjewett.tddemo.MyRouter");
-		jQuery.sap.require("util.ObjectSearch");
 
 		// 2. call overridden init (calls createContent)
 		sap.ui.core.UIComponent.prototype.init.apply(this, arguments);
