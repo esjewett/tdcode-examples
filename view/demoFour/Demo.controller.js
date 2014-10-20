@@ -26,18 +26,16 @@ sap.ui.controller("view.demoFour.Demo", {
 		var type = xfilter.dimension(function(d) { return d.type; });
 		var types = type.group();
 			
-		var oData;
+		var oData = {};
 
 		function buildData() {
-			return {
-				cars : brand.top(Infinity),
-				brands: brands.top(Infinity).filter(function(d) { return d.value > 0; }),
-				models: models.top(Infinity).filter(function(d) { return d.value > 0; }),
-				types: types.top(Infinity).filter(function(d) { return d.value > 0; })						
-			};
-		}
+			oData.cars =  brand.top(Infinity);
+			oData.brands = brands.top(Infinity).filter(function(d) { return d.value > 0; });
+			oData.models = models.top(Infinity).filter(function(d) { return d.value > 0; });
+			oData.types = types.top(Infinity).filter(function(d) { return d.value > 0; });					
+		};
 
-		oData = buildData();
+		buildData();
 
 		var oFFL1, oFFL2, oFFL3, oTable;
 
@@ -49,16 +47,13 @@ sap.ui.controller("view.demoFour.Demo", {
    		var oModel = new sap.ui.model.json.JSONModel();
     	oModel.setData(oData);
     	// sap.ui.getCore().setModel(oModel);
-    	this.oView.setModel(oModel);
+    	var oView = this.oView;
+    	oView.setModel(oModel);
 
     	function refreshBindings() {
 
-    		oData = buildData();
-    		oModel.setData(oData);
-    		oFFL1.getBinding("items").refresh();
-			oFFL2.getBinding("items").refresh();
-			oFFL3.getBinding("items").refresh();
-			oTable.getBinding('rows');
+    		buildData();
+    		oModel.refresh();
 
 			// Reset filters as the highlighting is not properly retained even though the keys match.
 			oFFL1.setSelectedKeys(filter1);

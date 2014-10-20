@@ -22,18 +22,16 @@ sap.ui.controller("view.demoFive.Demo", {
 		var distance = xfilter.dimension(function(d) { return Math.min(1999, d.distance); });
 		var distances = distance.group(function(d) { return Math.floor(d / 50) * 50; });
 			
-		var oData;
+		var oData = {};
 
 		function buildData() {
-			return {
-				flights : origin.top(Infinity),
-				origins: origins.top(Infinity).filter(function(d) { return d.value > 0; }),
-				destinations: destinations.top(Infinity).filter(function(d) { return d.value > 0; }),
-				delays: delays.top(Infinity).filter(function(d) { return d.value > 0; })						
-			};
+			oData.flights = origin.top(Infinity);
+			oData.origins = origins.top(Infinity).filter(function(d) { return d.value > 0; });
+			oData.destinations = destinations.top(Infinity).filter(function(d) { return d.value > 0; });
+			oData.delays = delays.top(Infinity).filter(function(d) { return d.value > 0; });
 		}
 
-		oData = buildData();
+		buildData();
 
 		var oFFL1, oFFL2, oFFL3, oTable;
 
@@ -49,12 +47,8 @@ sap.ui.controller("view.demoFive.Demo", {
 
     	function refreshBindings() {
 
-    		oData = buildData();
-    		oModel.setData(oData);
-    		oFFL1.getBinding("items").refresh();
-			oFFL2.getBinding("items").refresh();
-			oFFL3.getBinding("items").refresh();
-			oTable.getBinding('rows');
+    		buildData();
+    		oModel.refresh();
 
 			// Reset filters as the highlighting is not properly retained even though the keys match.
 			oFFL1.setSelectedKeys(filter1);
