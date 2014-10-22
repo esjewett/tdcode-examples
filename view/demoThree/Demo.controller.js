@@ -49,7 +49,7 @@ sap.ui.controller("view.demoThree.Demo", {
 		// 	oData.cars = oData.cars.concat(oData.cars);
 		// }
 
-		console.log(oData.cars.length);
+		// console.log(oData.cars.length);
 		
     	
     	function calcFilter(oEvent, sFilterAtt, oFFL1, sFilterAtt1, oFFL2, sFilterAtt2) {

@@ -55,6 +55,12 @@ sap.ui.controller("view.demoOne.Demo", {
 			d.distance = +d.distance;
 			});
 
+			// for(var i = 0; i < 2; i++) {
+			// 	flights = flights.concat(flights);
+			// }
+
+			// console.log(flights.length);
+
 			// Create the crossfilter for the relevant dimensions and groups.
 			var flight = crossfilter(flights),
 			  all = flight.groupAll(),

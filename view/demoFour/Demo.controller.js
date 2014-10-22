@@ -4,20 +4,28 @@ sap.ui.controller("view.demoFour.Demo", {
 		this.router = sap.ui.core.UIComponent.getRouterFor(this);
 		this.router.attachRoutePatternMatched(this._handleRouteMatched, this);
 
-		var xfilter = crossfilter([
-				{brand: "BMW", model: "320d", type: "Limousine"},
-				{brand: "BMW", model: "320d", type: "Coupé"},
-				{brand: "BMW", model: "320d", type: "Cabrio"},
-				{brand: "BMW", model: "325i", type: "Limousine"},
-				{brand: "BMW", model: "330d", type: "Limousine"},
-				{brand: "BMW", model: "330i", type: "Limousine"},
-				{brand: "BMW", model: "335i", type: "Limousine"},
-				{brand: "AUDI", model: "A1", type: "Limousine"},
-				{brand: "AUDI", model: "A3", type: "Limousine"},
-				{brand: "AUDI", model: "A4", type: "Limousine"},
-				{brand: "AUDI", model: "A5", type: "Limousine"},
-				{brand: "AUDI", model: "A6", type: "Limousine"}
-			]);
+		var cars = [
+			{brand: "BMW", model: "320d", type: "Limousine"},
+			{brand: "BMW", model: "320d", type: "Coupé"},
+			{brand: "BMW", model: "320d", type: "Cabrio"},
+			{brand: "BMW", model: "325i", type: "Limousine"},
+			{brand: "BMW", model: "330d", type: "Limousine"},
+			{brand: "BMW", model: "330i", type: "Limousine"},
+			{brand: "BMW", model: "335i", type: "Limousine"},
+			{brand: "AUDI", model: "A1", type: "Limousine"},
+			{brand: "AUDI", model: "A3", type: "Limousine"},
+			{brand: "AUDI", model: "A4", type: "Limousine"},
+			{brand: "AUDI", model: "A5", type: "Limousine"},
+			{brand: "AUDI", model: "A6", type: "Limousine"}
+		]
+
+		// for(var i = 0; i < 14; i++) {
+		// 	cars = cars.concat(cars);
+		// }
+
+		// console.log(cars.length);
+
+		var xfilter = crossfilter(cars);
 
 		var brand = xfilter.dimension(function(d) { return d.brand; });
 		var brands = brand.group();
